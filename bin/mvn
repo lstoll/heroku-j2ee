@@ -2,4 +2,5 @@
 APPDIR=$(cd "$(dirname "$0")"; cd .. ; pwd)
 export M2_HOME=$APPDIR/apache-maven-3.0.3
 mkdir -p $APPDIR/vendor/bundle > /dev/null 2>&1
+export MAVEN_OPTS=-Xmx224m
 $M2_HOME/bin/mvn -Dmaven.repo.local=$APPDIR/vendor/bundle/m2repo $@
